@@ -1,0 +1,14 @@
+# Ignore compiled executable files
+*.exe         # All executable files
+*.o           # Object files
+
+# Ignore temporary files
+*.tmp         # Temporary files
+*.bak         # Backup files
+
+# Ignore specific directories
+temp/         # Temporary directory for code runners or outputs
+
+# Ignore IDE-specific files (if applicable)
+.idea/        # JetBrains IDEs (e.g., IntelliJ, PyCharm)
+.vscode/      # Visual Studio Code settings
