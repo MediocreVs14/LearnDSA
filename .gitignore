@@ -1,6 +1,7 @@
 # Ignore compiled executable files
 *.exe         # All executable files
 *.o           # Object files
+**/*.exe
 
 # Ignore temporary files
 *.tmp         # Temporary files
