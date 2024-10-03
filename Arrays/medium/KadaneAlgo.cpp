@@ -1,19 +1,33 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int maxSubarr(vector <int> nums){
+
+//* Maximum Subarray using kadane algorithm
+
+
+vector<int> maxSubarr(vector <int> nums){
     int n = nums.size();
-    int sum = 0, maxsum = INT_MIN;
+    int maxsum = nums[0], sum =0;
+    int ansStart = -1, ansEnd = -1, start = 0;
 
     for(int i = 0 ; i < n ; i++){
-        sum = 0;
-        for(int j = i ; j < n ; j++){
-            sum = sum + nums[j];
-            maxsum = max(sum, maxsum);
+        if(sum == 0) start = i;
+        sum = sum + nums[i];
+        if(sum > maxsum){  
+            maxsum = sum;
+            ansStart = start;
+            ansEnd = i;
         }
+        if(sum < 0) sum = 0;
+    }
+    
+    vector <int> vec;
+    for(int i = ansStart ; i <= ansEnd ; i++){
+        vec.push_back(nums[i]);
     }
 
-    return maxsum;
+
+    return vec;
 }
 
 int maxKadane(vector <int> nums){
@@ -27,25 +41,6 @@ int maxKadane(vector <int> nums){
     }
     return maxsum;
 }
-vector <int> maxKadaneArr(vector <int> nums){
-    int n = nums.size();
-    int maxsum = nums[0], sum =0;
-    vector <int> vec;
-
-    for(int i = 0 ; i < n ; i++){
-        sum = sum + nums[i];
-
-        if(sum > maxsum) {
-            maxsum = sum;
-        }
-        if(sum < 0){ 
-            sum = 0;
-            vec.clear();
-        }
-        
-    }
-    return vec;
-}
 
 
 int main(){
@@ -55,9 +50,9 @@ int main(){
 
     int ans = maxKadane(vec);
 
-    vector <int> arr = maxKadaneArr(vec2);
+    vector<int> ans2 = maxSubarr(vec2);
 
-    for(auto it : arr){
+    for(auto it : ans2){
         cout << it << " ";    
     }
 }
