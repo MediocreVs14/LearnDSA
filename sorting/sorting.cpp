@@ -18,7 +18,7 @@ vector <int> selectionSort(vector <int> &arr){
     return arr;
 }
 
-// optimised bubble sort
+//* optimised bubble sort
 vector <int> bubbleSort(vector <int> &arr){
     int temp , len = arr.size(), flag;
     for(int i = 0 ; i < len ; i++){
@@ -53,7 +53,7 @@ void insertionSort(vector <int> &arr){
     }
 }
 
-//Merge sort
+//* Merge sort
 void merge(vector <int> &arr, int low, int mid, int high){
     vector <int> temp;
     int left = low;

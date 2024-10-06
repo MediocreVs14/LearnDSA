@@ -3,6 +3,9 @@
 *.o           # Object files
 **/*.exe
 misc.cpp
+misc.exe
+practice.c
+practice.exe
 
 # Ignore temporary files
 *.tmp         # Temporary files
