@@ -2,6 +2,7 @@
 *.exe         # All executable files
 *.o           # Object files
 **/*.exe
+misc.cpp
 
 # Ignore temporary files
 *.tmp         # Temporary files
