@@ -2,8 +2,8 @@
 using namespace std;
 
 int main(){
-    vector<int> arr1 = {1,3,5,7};
-    vector<int> arr2 = {0,2,6,8,9};
+    vector<int> arr1 = {0,1,3,4,5};
+    vector<int> arr2 = {2,3,6,8,9};
 
     int n = arr1.size();
     int m = arr2.size();
